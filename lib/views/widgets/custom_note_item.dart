@@ -27,7 +27,7 @@ class NoteItem extends StatelessWidget {
             child: Text(
               'Build your career with ahmed miska',
               style:
-                  TextStyle(color: Colors.black.withOpacity(.4), fontSize: 20),
+                  TextStyle(color: Colors.black.withOpacity(.4), fontSize: 18),
             ),
           ),
           trailing: IconButton(
