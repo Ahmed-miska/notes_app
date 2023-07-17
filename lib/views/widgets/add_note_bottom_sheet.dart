@@ -5,7 +5,8 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:notes_app/constant.dart';
 import 'package:notes_app/views/widgets/cutom_text_field.dart';
 
-import '../../cubits/cubit/add_note_cubit.dart';
+
+import '../../cubits/add_note_cubit/add_note_cubit.dart';
 import 'add_note_form.dart';
 import 'custom_botton.dart';
 
@@ -32,7 +33,11 @@ class AddNoteBottomSheet extends StatelessWidget {
           return AbsorbPointer(
             absorbing: state is AddNoteLoading ? true : false,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: EdgeInsets.only(
+                right: 16,
+                left: 16,
+                bottom: MediaQuery.of(context).viewInsets.bottom,
+              ),
               child: SingleChildScrollView(
                 child: AddNoteForm(),
               ),
