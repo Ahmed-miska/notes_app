@@ -3,9 +3,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SimpleBlocObserver extends BlocObserver {
   @override
-  void onEvent(Bloc bloc, Object? event) {
-    super.onEvent(bloc, event);
-    // TODO: implement onEvent
+  void onClose(BlocBase bloc) {
+    debugPrint('close = $bloc');
+  }
+
+@override
+  void onCreate(BlocBase bloc) {
+    debugPrint('create = $bloc');
   }
 
   @override
